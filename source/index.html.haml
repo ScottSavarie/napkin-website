@@ -9,13 +9,17 @@ description: "Napkin is an app for designing quick mocks on your phone"
 %header
 	.l-module
 		.l-container--narrow
-			.one-half.fl
+			.one-half.intro-text-container
 				%img.logo{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
 				.intro-text
 					%h1.header.text-white
 						Design quick mocks on your phone.
-			.one-half.fl.text-right
-				%img.graphic{:src=>"img/mock.png", :alt=> "Napkin Mockup"}
+				%a.primary-btn{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
+					%span Get it on the app store
+			.one-half.graphic-wrapper
+				.video-wrapper
+					<video webkit-playsinline id="home-video--intro"class="home-video" autoplay="autoplay" loop="true"><source src="videos/app-video.mp4" type="video/mp4" /><source src="videos/app-video.ogv" type="video/ogv"/><source src="videos/app-video.webm" type="video/webm"/><object type="application/x-shockwave-flash" data="flash/player.swf"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="file=videos/123_bannervid.mp4"><!--[if IE]><!--><param name="movie" value="flash/player.swf"><!--<![endif]--></object></video>
+					%img.graphic{:src=>"img/iphone.png", :alt=> "Napkin Mockup"}
 
 %footer
 	.l-container--narrow
