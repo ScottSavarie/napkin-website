@@ -31,9 +31,20 @@
 	@media only screen and (min-width: $second-break)
 		text-align: right
 		float: right
-		max-width: 334px
-		width: 35%
+		max-width: 100%
+		width: 47%
+		margin-top: -13%
+		+translateY(-50em)
+		+transition-property(translateY)
+		+transition-duration(0.5s)
+		+transition-timing-function(ease-out)
 
+.show-phone
+	+translateY(0em)
+	+transition-property(translateY)
+	+transition-duration(0.5s)
+	+transition-delay(0.4)
+	+transition-timing-function(ease-out)
 
 
 
