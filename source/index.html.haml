@@ -1,0 +1,27 @@
+---
+title: "Napkin - Design Quick Mocks On Your Phone"
+description: "Napkin is an app for designing quick mocks on your phone"
+---
+
+- @body_class = 'page-home'
+- @page_class = ''
+
+%header
+	.l-module
+		.l-container--narrow
+			.one-half.fl
+				%img.logo{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
+				.intro-text
+					%h1.header.text-white
+						Design quick mocks on your phone.
+			.one-half.fl.text-right
+				%img.graphic{:src=>"img/mock.png", :alt=> "Napkin Mockup"}
+
+%footer
+	.l-container--narrow
+		.divider
+		%p.text-white.one-half.fl
+			Designed and coded by <a href = "http://www.scottsavarie.ca">Scott Savarie</a>
+		%a.one-half.fl.contact-link{:href=>"mailTo:hello@napkinapp.com", :alt=>"Napkin App Contact"}
+			%span hello@napkinapp.com
+
