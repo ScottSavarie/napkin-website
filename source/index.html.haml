@@ -10,11 +10,11 @@ description: "Napkin is an app for designing quick mocks on your phone"
 	.l-module
 		.l-container--narrow
 			.one-half.intro-text-container
-				%img.logo{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
-				.intro-text
+				%img.logo#logo{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
+				.intro-text#intro-text
 					%h1.header.text-white
 						Design quick mocks on your phone.
-				%a.primary-btn{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
+				%a.primary-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
 					%span Get it on the app store
 			.one-half.graphic-wrapper#graphic-wrapper
 				.video-wrapper
@@ -22,11 +22,11 @@ description: "Napkin is an app for designing quick mocks on your phone"
 				.phone-mask
 					%img.graphic{:src=>"img/iphone.png", :alt=> "Napkin Mockup"}
 
-%footer
+%footer.footer#footer
 	.l-container--narrow
 		.divider
 		%p.text-white.one-half.fl
-			Designed and coded by <a href = "http://www.scottsavarie.ca">Scott Savarie</a>
-		%a.one-half.fl.contact-link{:href=>"mailTo:hello@napkinapp.com", :alt=>"Napkin App Contact"}
+			Designed and coded by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
+		%a.one-half.fl.contact-link.inline-link{:href=>"mailTo:hello@napkinapp.com", :alt=>"Napkin App Contact"}
 			%span hello@napkinapp.com
 

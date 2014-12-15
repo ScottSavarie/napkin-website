@@ -5,13 +5,21 @@
 
 .logo
 	width: 5em
+	+translateY(10em)
+	+opacity(0)
 
 .intro-text
 	margin-top: 16%
 	margin-bottom: 2em
+	+translateY(10em)
+	+opacity(0)
 	@media only screen and (min-width: $second-break)
 		width: 90%
 		margin-top: 40%
+
+.primary-btn
+	+translateY(10em)
+	+opacity(0)
 
 .intro-text-container
 	margin-bottom: $l-xxl
@@ -22,31 +30,69 @@
 		float: left
 
 
+
 .graphic-wrapper
 	text-align: center
 	position: relative
 	padding-bottom: $l-xxl
 	max-width: 322px
 	margin: 0 auto
+	+opacity(0)
+	+translateY(10em)
 	@media only screen and (min-width: $second-break)
 		text-align: right
 		float: right
 		max-width: 100%
-		width: 47%
-		margin-top: -13%
+		width: 40%
+		// margin-top: -13%
+		+translateY(-10em)
+
+
+
+
+.footer
+	@media only screen and (min-width: $second-break)
+		+opacity(0)
+
+
+
+@-webkit-keyframes phone-bounce
+	0%
 		+translateY(-50em)
-		+transition-property(translateY)
-		+transition-duration(0.5s)
-		+transition-timing-function(ease-out)
+			
+	20%, 60%, 90%, 100% 
+		+translateY(0em)
+	40%
+		+translateY(-3em)
+	70%
+		+translateY(-1.5em)
+
+
+
 
 .show-phone
 	+translateY(0em)
-	+transition-property(translateY)
-	+transition-duration(0.5s)
-	+transition-delay(0.4)
-	+transition-timing-function(ease-out)
+	+opacity(1)
+	+single-transition(all, 0.5s, ease-out, 0.3s)
 
+.show-logo
+	+translateY(0em)
+	+opacity(1)
+	+single-transition(all, 0.35s, ease-out, 0.3s)
 
+.show-text
+	+translateY(0em)
+	+opacity(1)
+	+single-transition(all, 0.35s, ease-out, 0.4s)
+
+.show-btn
+	+translateY(0em)
+	+opacity(1)
+	+single-transition(all, 0.5s, ease-out, 0.4s)
+
+.show-footer
+	+opacity(1)
+	+single-transition(all, 0.35s, ease-out, 1s)
 
 .phone-mask
 	position: absolute

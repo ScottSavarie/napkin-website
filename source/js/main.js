@@ -3,13 +3,16 @@
 ============================================================================== */
 
 $(document).ready(function() {
-    var width = $(window).width();
-    if (width >= 768) {
-        $("#graphic-wrapper").addClass("show-phone");
-          
-      }
+  $("#graphic-wrapper").addClass("show-phone");  
+  $("#logo").addClass("show-logo");
+  $("#intro-text").addClass("show-text");
+  $("#primary-button").addClass("show-btn");
+  $("#footer").addClass("show-footer");
     
 });
+
+
+
 
 
 console.log("yoyo");
