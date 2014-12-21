@@ -10,10 +10,16 @@ description: "Napkin is an app for designing quick mocks on your phone"
 	.l-module
 		.l-container--narrow
 			.one-half.intro-text-container
-				%img.logo#logo{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
+				#logo.logo
+					%img{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
+					%p.text-white
+						Napkin
 				.intro-text#intro-text
 					%h1.header.text-white
 						Design quick mocks on your phone.
+					%p.text-white
+						Ideas hit us at weird times—like when we're commuting, in bed, or bored on the couch. Wherever it happens, now you can quickly mock something up in seconds and see it on your device. Take a screenshot to send it to yourself for later to finish on the computer.
+
 				%a.primary-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
 					%span Get it on the app store
 			.one-half.graphic-wrapper#graphic-wrapper
