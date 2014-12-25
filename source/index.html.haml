@@ -28,9 +28,8 @@ description: "Napkin is an app for designing quick mocks on your phone"
 
 
 %section.l-module.white-bg
-	.l-container--thin
-		%h1.header.text-center
-			Features
+	%h1.header.text-center.features
+		Features
 	.l-container--narrow
 		%section
 			%ul.feature-list
@@ -89,8 +88,21 @@ description: "Napkin is an app for designing quick mocks on your phone"
 
 
 
+%section.l-module.white-bg
+	%h1.header.text-center.features
+		Napkin Sketches
+	.l-container--narrow	
+		%img{:src=>"img/designed-mock.png", :alt=>"Designed With Napkin"}				
+		%p.sketches-text
+			Here are some quick mock ups that show what is possible with Napkin. It's surprising how fast one can quickly sketch out their idea. The point is not to make final polished designs, but rather quick mocks and send it to yourself for later. 
+
 %footer.footer#footer
+
 	.l-container--narrow
+		#logo.footer-logo
+			%img{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
+			%p.text-white
+				Napkin
 		.divider
 		%p.text-white.one-half.fl
 			Designed and coded by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
