@@ -9,100 +9,86 @@ description: "Napkin is an app for designing quick mocks on your phone"
 %header
 	.l-module
 		.l-container--narrow
-			.one-half.intro-text-container
+			.one-half.intro-text-wrapper
 				#logo.logo
 					%img{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
 					%p.text-white
 						Napkin
 				.intro-text#intro-text
 					%h1.header.text-white
-						Design quick mocks on your phone.
+						Design quick mocks on your iPhone.
 
 				%a.primary-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
 					%span Get it on the app store
-			.one-half.graphic-wrapper#graphic-wrapper
+			.one-half.header-graphic#graphic-wrapper
 				.video-wrapper
 					<video webkit-playsinline id="home-video--intro"class="home-video" autoplay="autoplay" loop="true"><source src="videos/app-video.mp4" type="video/mp4" /><source src="videos/app-video.ogv" type="video/ogv"/><source src="videos/app-video.webm" type="video/webm"/><object type="application/x-shockwave-flash" data="flash/player.swf"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="file=videos/123_bannervid.mp4"><!--[if IE]><!--><param name="movie" value="flash/player.swf"><!--<![endif]--></object></video>
 				.phone-mask
 					%img.graphic{:src=>"img/iphone.png", :alt=> "Napkin Mockup"}
 
 
-%section.l-module.white-bg
-	%h1.header.text-center.features
-		Features
+
+
+%section.l-module--spaced
 	.l-container--narrow
-		%section
-			%ul.feature-list
+		.graphic-wrapper--left.layers-graphic
+			%img{:src=>"img/layers-panel.png", :alt=> "Napkin Layers Panel"}
+		.layers-text-wrapper
+			%h1.header.text-white
+				Layer Controls
+			%p.text-white
+				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
+			%ul.features-list
 				%li
-					%h2
-						Snap to Grid
-					%p
-						Snap shapes to the point grid you choose
+					Feature One
 				%li
-					%h2
-						Layering
-					%p
-						Move layers up or down
+					Feature One
 				%li
-					%h2
-						Icons
-					%p
-						Select from a library of icons
-				
-
-				%li
-					%h2
-						Editing Controls
-					%p
-						Double Tap anything to edit it
-				%li
-					%h2
-						Photos
-					%p
-						Add photos from your camera roll
-				%li
-					%h2
-						Saving
-					%p
-						The Canvas should be saved automatically
-
-
-				%li
-					%h2
-						Duplicating
-					%p
-						Two-finger tap to duplicate
-
-				%li
-					%h2
-						Locking
-					%p
-						Lock or unlock layers into place
-
-
-				%li
-					%h2
-						Editing Controls
-					%p
-						Double Tap anything to edit it
+					Feature One
 
 
 
-%section.l-module.white-bg
-	%h1.header.text-center.features
-		Napkin Sketches
-	.l-container--narrow	
-		%img{:src=>"img/designed-mock.png", :alt=>"Designed With Napkin"}				
-		%p.sketches-text
-			Here are some quick mock ups that show what is possible with Napkin. It's surprising how fast one can quickly sketch out their idea. The point is not to make final polished designs, but rather quick mocks and send it to yourself for later. 
+%section.l-module--spaced
+	.l-container--narrow
+		.graphic-wrapper--right.canvas-graphic
+			%img.graphic{:src=>"img/canvas.png", :alt=> "Napkin Canvas"}
+		.one-half.text-wrapper--left
+			%h1.header.text-white
+				Canvas
+			%p.text-white
+				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
+			%ul.features-list
+				%li
+					Feature One
+				%li
+					Feature One
+				%li
+					Feature One
+
+
+%section.l-module--spaced
+	.l-container--narrow
+		.graphic-wrapper--left.controls-graphic
+			%img.graphic{:src=>"img/editing-controls.png", :alt=> "Napkin Editing Controls"}
+		.one-half.text-wrapper--left
+			%h1.header.text-white
+				Editing Controls
+			%p.text-white
+				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
+			%ul.features-list
+				%li
+					Feature One
+				%li
+					Feature One
+				%li
+					Feature One
+
+
 
 %footer.footer#footer
-
 	.l-container--narrow
-		#logo.footer-logo
-			%img{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
-			%p.text-white
-				Napkin
+		%h1.text-white.header
+			Start Designing Mocks On Your Phone.
 		.divider
 		%p.text-white.one-half.fl
 			Designed and coded by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>

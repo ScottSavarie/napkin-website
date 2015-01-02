@@ -35,37 +35,111 @@
 	+opacity(0)
 	@media only screen and (min-width: $second-break)
 		width: 90%
-		margin-top: 30%
+		margin-top: 35%
+
+.intro-text-wrapper
+	margin-bottom: $l-xxl
+	text-align: center
+	width: 100%
+	@media only screen and (min-width: $second-break)
+		text-align: left
+		float: left
+		width: 50%
+		margin-bottom: 0
+
 
 .primary-btn
 	+translateY(10em)
 	+opacity(0)
 
-.intro-text-container
+
+
+
+
+
+.text-wrapper--left
 	margin-bottom: $l-xxl
-	text-align: center
+	text-align: left
+	float: left
+	width: 50%
+	margin-left: 1em
 	@media only screen and (min-width: $second-break)
 		margin-bottom: 0
-		text-align: left
-		float: left
+
+.text-wrapper--right
+	margin-bottom: $l-xxl
+	text-align: left
+	float: right
+	width: 50%
+	margin-left: 1em
+	@media only screen and (min-width: $second-break)
+		margin-bottom: 0
 
 
 
-.graphic-wrapper
+.graphic-wrapper--right
+	max-width: 48%
+	margin-left: -8%
+	float: right
 	text-align: center
 	position: relative
 	padding-bottom: $l-xxl
-	max-width: 322px
+	@media only screen and (min-width: $second-break)
+		max-width: 270px
+		margin: 0
+		height: auto
+		overflow: visible
+		text-align: left
+
+
+.graphic-wrapper--left
+	max-width: 48%
+	margin-left: -8%
+	float: left
+	text-align: center
+	position: relative
+	padding-bottom: $l-xxl
+	@media only screen and (min-width: $second-break)
+		max-width: 270px
+		margin: 0
+		height: auto
+		overflow: visible
+		text-align: left
+
+
+
+.header-graphic
 	margin: 0 auto
 	+opacity(0)
 	+translateY(10em)
+	max-width: 300px
+	text-align: center
+	position: relative
+	padding-bottom: $l-xxl
 	@media only screen and (min-width: $second-break)
 		text-align: right
-		float: right
-		max-width: 100%
-		width: 40%
-		// margin-top: -13%
+		max-width: 47%
+		width: 100%
 		+translateY(-10em)
+		text-align: right
+		float: right
+
+
+.layers-graphic
+	@media only screen and (min-width: $second-break)
+		max-width: 270px
+
+
+
+.canvas-graphic
+	@media only screen and (min-width: $second-break)
+		max-width: 336px
+
+
+
+.controls-graphic
+	@media only screen and (min-width: $second-break)
+		max-width: 420px
 
 
 
@@ -73,6 +147,9 @@
 .footer
 	@media only screen and (min-width: $second-break)
 		+opacity(0)
+
+
+
 
 
 
@@ -94,6 +171,8 @@
 	+translateY(0em)
 	+opacity(1)
 	+single-transition(all, 0.5s, ease-out, 0.3s)
+	@media only screen and (min-width: $second-break)
+		+translateY(-5.5em)
 
 .show-logo
 	+translateY(0em)
@@ -156,24 +235,5 @@
 	margin-top: $l-s
 
 
-
-.feature-list
-	h2
-		font-size: $f-m
-	p
-		line-height: 1.3
-
-	@media only screen and (min-width: $first-break)
-		+columns(200px 3)
-
-		li
-			+inline-block
-
-
-
-.sketches-text
-	max-width: 400px
-	margin: 0 auto
-	padding: $l-l 0
 	
 
