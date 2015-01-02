@@ -3,16 +3,20 @@
 
 
 p
-	color: $c-darkgrey
-	line-height: 1.625
+	line-height: $f-lineheight
 	margin-bottom: $l-s  
+	font-size: $f-m
+
 	
 
 .header
-	font-size: $f-xl
 	font-weight: 300
-.text-white
-	color: white
+	font-size: $f-l
+	-webkit-font-smoothing: auto
+	margin-bottom: 0.3em
+	@media only screen and (min-width: $first-break)
+		font-size: $f-xl
+
 
 .text-center	
 	text-align: center

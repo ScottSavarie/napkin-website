@@ -44,7 +44,7 @@
 	@media only screen and (min-width: $second-break)
 		text-align: left
 		float: left
-		width: 50%
+		width: 46%
 		margin-bottom: 0
 
 
@@ -62,24 +62,40 @@
 	text-align: left
 	float: left
 	width: 50%
-	margin-left: 1em
+	margin-top: 10%
 	@media only screen and (min-width: $second-break)
+		width: 48%
+		max-width: 18em
 		margin-bottom: 0
+		margin-top: 20%
+		margin-left: 8%
+
 
 .text-wrapper--right
 	margin-bottom: $l-xxl
 	text-align: left
-	float: right
+	float: left
 	width: 50%
 	margin-left: 1em
+	margin-top: 10%
 	@media only screen and (min-width: $second-break)
+		width: 48%
+		max-width: 18em
+		margin-left: 14%
 		margin-bottom: 0
+		margin-top: 20%
+
+
+.controls-text-wrapper
+	margin-top: 0
+	@media only screen and (min-width: $second-break)
+		margin-top: 7%
 
 
 
 .graphic-wrapper--right
 	max-width: 48%
-	margin-left: -8%
+	margin-right: -8%
 	float: right
 	text-align: center
 	position: relative
@@ -118,7 +134,7 @@
 	padding-bottom: $l-xxl
 	@media only screen and (min-width: $second-break)
 		text-align: right
-		max-width: 47%
+		max-width: 43%
 		width: 100%
 		+translateY(-10em)
 		text-align: right
@@ -139,7 +155,7 @@
 
 .controls-graphic
 	@media only screen and (min-width: $second-break)
-		max-width: 420px
+		max-width: 46%
 
 
 
@@ -235,5 +251,23 @@
 	margin-top: $l-s
 
 
-	
+
+.features-list
+	li
+		+opacity(0.5)
+		line-height: 2em
+		font-size: $f-m
+
+		&:before
+			content: ''
+			background: url('../img/arrow.png') no-repeat left top
+			height: 10px
+			width: 30px
+			display: block
+			position: relative
+			float: left
+			background-size: 15px
+			margin-top: 13px
+
+
 

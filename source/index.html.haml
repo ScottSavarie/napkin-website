@@ -12,10 +12,10 @@ description: "Napkin is an app for designing quick mocks on your phone"
 			.one-half.intro-text-wrapper
 				#logo.logo
 					%img{:src=>"img/napkin-logo.png", :alt=>"Napkin Logo"}	
-					%p.text-white
+					%p
 						Napkin
 				.intro-text#intro-text
-					%h1.header.text-white
+					%h1.header
 						Design quick mocks on your iPhone.
 
 				%a.primary-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
@@ -29,68 +29,69 @@ description: "Napkin is an app for designing quick mocks on your phone"
 
 
 
-%section.l-module--spaced
+%section.l-module--wide
 	.l-container--narrow
 		.graphic-wrapper--left.layers-graphic
 			%img{:src=>"img/layers-panel.png", :alt=> "Napkin Layers Panel"}
-		.layers-text-wrapper
-			%h1.header.text-white
+		.text-wrapper--right
+			%h1.header
 				Layer Controls
-			%p.text-white
+			%p
 				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
 			%ul.features-list
 				%li
-					Feature One
+					Add various layers to canvas
 				%li
-					Feature One
+					Objects snap to grid
 				%li
-					Feature One
+					Control status bar appearance
 
 
 
-%section.l-module--spaced
+%section.l-module--wide
 	.l-container--narrow
 		.graphic-wrapper--right.canvas-graphic
 			%img.graphic{:src=>"img/canvas.png", :alt=> "Napkin Canvas"}
 		.one-half.text-wrapper--left
-			%h1.header.text-white
+			%h1.header
 				Canvas
-			%p.text-white
+			%p
 				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
 			%ul.features-list
 				%li
-					Feature One
+					Resize anything by dragging
 				%li
-					Feature One
+					Double tap anything to edit
 				%li
-					Feature One
+					Two finger tap to duplicate
 
 
-%section.l-module--spaced
+%section.l-module--wide
 	.l-container--narrow
 		.graphic-wrapper--left.controls-graphic
 			%img.graphic{:src=>"img/editing-controls.png", :alt=> "Napkin Editing Controls"}
-		.one-half.text-wrapper--left
-			%h1.header.text-white
+		.one-half.text-wrapper--right.controls-text-wrapper
+			%h1.header
 				Editing Controls
-			%p.text-white
+			%p
 				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
 			%ul.features-list
 				%li
-					Feature One
+					Control layer properties
 				%li
-					Feature One
+					Locking and layering 
 				%li
-					Feature One
+					Deleting layers
 
 
 
-%footer.footer#footer
+%footer.l-module--spaced.footer#footer
 	.l-container--narrow
-		%h1.text-white.header
+		%h1.header
 			Start Designing Mocks On Your Phone.
+	.l-container--narrow
 		.divider
-		%p.text-white.one-half.fl
+		%p.one-half.fl
 			Designed and coded by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
 		%a.one-half.fl.contact-link.inline-link{:href=>"mailTo:hello@napkinapp.com", :alt=>"Napkin App Contact"}
 			%span hello@napkinapp.com
