@@ -44,11 +44,11 @@
 	@media only screen and (min-width: $second-break)
 		text-align: left
 		float: left
-		width: 46%
+		width: 42%
 		margin-bottom: 0
 
 
-.primary-btn
+.header-btn
 	+translateY(10em)
 	+opacity(0)
 
@@ -242,6 +242,7 @@
 	height: 2px
 	background: #4e9dff
 	margin-bottom: $l-s
+	clear: both
 
 .contact-link
 	@media only screen and (min-width: $second-break)
@@ -269,5 +270,26 @@
 			background-size: 15px
 			margin-top: 13px
 
+
+.cta-wrapper
+	padding-bottom: $l-m
+	@media only screen and (min-width: $second-break)
+		padding-bottom: $l-xl*2.5
+
+.cta-header
+	width: 100%
+	text-align: center
+	@media only screen and (min-width: $second-break)
+		width: 70%
+		text-align: left
+		float: left
+
+.cta-button
+	display: block
+	text-align: center
+	@media only screen and (min-width: $second-break)
+		max-width: 10em
+		float: right
+	
 
 

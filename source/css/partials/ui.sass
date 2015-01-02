@@ -1,6 +1,12 @@
 
 .primary-btn
 	padding: $l-s
-	background: rgba(0,0,0,0.6)
+	border: 2px solid rgba(255,255,255,0.5)
 	+border-radius(3px)
 	font-weight: 400
+	color: rgba(255,255,255,0.5)
+	font-size: $f-m
+	&:hover
+		+single-transition(all, 0.2s, ease-in-out)
+		background: rgba(255,255,255,0.5)
+		color: rgba(255,255,255,1)

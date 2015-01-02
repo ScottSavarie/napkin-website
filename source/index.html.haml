@@ -18,7 +18,7 @@ description: "Napkin is an app for designing quick mocks on your phone"
 					%h1.header
 						Design quick mocks on your iPhone.
 
-				%a.primary-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
+				%a.primary-btn.header-btn#primary-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
 					%span Get it on the app store
 			.one-half.header-graphic#graphic-wrapper
 				.video-wrapper
@@ -87,9 +87,11 @@ description: "Napkin is an app for designing quick mocks on your phone"
 
 %footer.l-module--spaced.footer#footer
 	.l-container--narrow
-		%h1.header
-			Start Designing Mocks On Your Phone.
-	.l-container--narrow
+		.cta-wrapper
+			%h1.header.cta-header
+				Start Designing Mocks On Your Phone.
+			%a.primary-btn.cta-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
+				%span Get it on the app store
 		.divider
 		%p.one-half.fl
 			Designed and coded by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
