@@ -90,6 +90,7 @@
 	margin-top: 0
 	@media only screen and (min-width: $second-break)
 		margin-top: 7%
+		width: 39%
 
 
 
@@ -259,13 +260,15 @@
 .features-list
 	li
 		+opacity(0.5)
-		line-height: 2em
 		font-size: $f-m
-
+		float: left
+		padding-bottom: $l-s
+		@media only screen and (min-width: $second-break)
+			padding-bottom: 0
 		&:before
 			content: ''
 			background: url('../img/arrow.png') no-repeat left top
-			height: 10px
+			height: 20px
 			width: 30px
 			display: block
 			position: relative
