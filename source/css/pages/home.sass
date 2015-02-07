@@ -149,18 +149,33 @@
 
 
 .layers-graphic
+	max-width: 70%
+	margin-left: -27%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-left: -8%
 	@media only screen and (min-width: $second-break)
 		max-width: 335px
 
 
 
 .canvas-graphic
+	max-width: 70%
+	margin-right: -27%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-right: -8%
 	@media only screen and (min-width: $second-break)
 		max-width: 336px
 
 
 
 .controls-graphic
+	max-width: 80%
+	margin-left: -40%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-left: -8%
 	@media only screen and (min-width: $second-break)
 		max-width: 46%
 
@@ -232,7 +247,10 @@
 	height: 2px
 	background: #4e9dff
 	margin-bottom: $l-s
+	margin-top: $l-m
 	clear: both
+	@media only screen and (min-width: $second-break)
+		margin-top: 0
 
 .contact-link
 	.inline-link
@@ -283,8 +301,16 @@
 .cta-header
 	width: 100%
 	text-align: center
+	margin-bottom: $l-s
+	width: 88%
+	max-width: 10em
+	margin-left: auto
+	margin-right: auto
+	@media only screen and (min-width: $second-break)
+		margin-bottom: $l-m
 	@media only screen and (min-width: $second-break)
 		width: 70%
+		max-width: 100%
 		text-align: left
 		float: left
 
