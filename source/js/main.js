@@ -7,7 +7,7 @@ $(document).ready(function() {
   $("#logo").addClass("show-logo");
   $("#intro-text").addClass("show-text");
   $("#primary-button").addClass("show-btn");
-  $("#footer").addClass("show-footer");
+
     
 });
 
