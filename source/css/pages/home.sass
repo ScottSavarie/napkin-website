@@ -34,7 +34,7 @@
 	+translateY(10em)
 	+opacity(0)
 	@media only screen and (min-width: $second-break)
-		width: 90%
+		width: 100%
 		margin-top: 35%
 
 .intro-text-wrapper
@@ -211,34 +211,37 @@
 	+single-transition(all, 0.35s, ease-out, 1s)
 
 .phone-mask
-	display: none
-	@media only screen and (min-width: $second-break)
-		display: inherit
-		position: absolute
-		top: 0
-		left: 0
-		z-index: 10
+	// display: none
+	// @media only screen and (min-width: $second-break)
+	display: inherit
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	width: 100%
+	height: 100%
+	img
 		width: 100%
-		height: 100%
-		img
-			width: 100%
 
 .home-video
 	position: absolute
-	top: 6%
+	top: 6.1%
 	left: 0
 	width: 100%
 	height: 100%
 
 
 .video-wrapper
-	width: 87%
+	width: 86.5%
 	height: 0
 	padding-bottom: 182%
 	position: relative
 	overflow: hidden
 	text-align: center
 	margin: 0 auto
+	z-index: 100
+	@media only screen and (min-width: $second-break)
+		z-index: 1
 
 .divider
 	width: 100%
@@ -249,8 +252,13 @@
 	clear: both
 
 .contact-link
+	.inline-link
+		padding-right: $l-s
 	@media only screen and (min-width: $second-break)
 		text-align: right
+		.inline-link
+			padding-left: $l-s
+			padding-right: 0
 
 .features
 	margin-top: $l-s
