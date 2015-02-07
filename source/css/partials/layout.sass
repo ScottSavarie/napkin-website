@@ -15,16 +15,21 @@
   @media only screen and (min-width: $second-break)
     padding: $l-m 0
 
+.full-height
+  @media only screen and (min-height: 680px)
+    height: 100%
+
+
 .white-bg
   background: white
 
 .l-container, %l-container
-  width: 90%
+  width: 100%
   max-width: 1080px
   margin: 0 auto
   display: block
-  overflow: visible
-
+  overflow: hidden
+  +box-sizing(border-box)
 .overflow
   overflow: visible !important
 
