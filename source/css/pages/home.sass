@@ -49,6 +49,8 @@
 	text-align: center
 	width: 100%
 	margin-top: $l-l
+	position: relative
+	z-index: 10
 	@media only screen and (min-width: $second-break)
 		text-align: left
 		float: left
@@ -106,7 +108,7 @@
 		height: auto
 		overflow: visible
 		text-align: left
-	@media only screen and (min-width: $second-break)
+	@media only screen and (min-width: $third-break)
 		float: left
 
 .graphic-wrapper--left
@@ -275,7 +277,7 @@
 	@media only screen and (min-width: $second-break)
 		margin-bottom: $l-m
 	@media only screen and (min-width: $second-break)
-		width: 70%
+		width: 67%
 		max-width: 100%
 		text-align: left
 		float: left
@@ -328,13 +330,15 @@
 
 
 
-
-
-
+.invisible
+	+opacity(0)
+	+single-transition(all, 0.2s, ease-out)
 
 .layers-graphic
+	position: relative
 	max-width: 70%
 	margin-left: -27%
+	z-index: 5
 	@media only screen and (min-width: $first-break)
 		max-width: 48%
 		margin-left: -8%
@@ -353,6 +357,8 @@
 .canvas-graphic
 	max-width: 70%
 	margin-right: -27%
+	position: relative
+	z-index: 3
 	@media only screen and (min-width: $first-break)
 		max-width: 48%
 		margin-right: -8%
@@ -368,6 +374,8 @@
 
 
 .controls-graphic
+	position: relative
+	z-index: 1
 	max-width: 70%
 	margin-left: -28%
 	@media only screen and (min-width: $first-break)
