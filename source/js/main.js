@@ -92,3 +92,16 @@ $(window).scroll(function(event) {
 });
 
 });
+
+
+$( window ).resize(function() {
+  if(window.innerWidth < 960){
+  	 $(".layers-graphic").removeAttr( 'style' );
+  	 $(".layers-text").removeAttr( 'style' );
+  	 $(".canvas-graphic").removeAttr( 'style' );
+  	 $(".canvas-text").removeAttr( 'style' );
+  	 $(".controls-graphic").removeAttr( 'style' );
+  	 $(".controls-text").removeAttr( 'style' );
+  }
+});
+
