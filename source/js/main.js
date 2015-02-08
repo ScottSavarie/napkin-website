@@ -26,20 +26,46 @@ map_range = function(value, low1, high1, low2, high2) {
 }
 
 
+
+
 var lastScrollTop = 0;
 
 $(window).load(function(){
 
+var layersGraphicHeight = $("#layers-graphic").height();
+var canvasGraphicHeight = $("#canvas-graphic").height();
+var controlsGraphicHeight = $("#controls-graphic").height();
+
+// update wrapper min heights and top positions of graphics
+if(window.innerWidth >= 960){
+	$(".layers-wrapper").css({"min-height": window.innerHeight});
+	$(".canvas-wrapper").css({"min-height": window.innerHeight});
+	$(".controls-wrapper").css({"min-height": window.innerHeight});
+	$("#layers-graphic").css({"top": (window.innerHeight / 2) - (layersGraphicHeight / 2) + 15 + "px" });
+	$("#canvas-graphic").css({"top": (window.innerHeight / 2) - (canvasGraphicHeight / 2) + 15 + "px" });
+	$("#controls-graphic").css({"top": (window.innerHeight / 2) - (controlsGraphicHeight / 2) + 15 + "px" });
+}
+
+// get wrapper positions
 var layersWrapper = $(".layers-wrapper").offset().top;
 var canvasWrapper = $(".canvas-wrapper").offset().top;
 var controlsWrapper = $(".controls-wrapper").offset().top;
 
+
 $(window).scroll(function(event) {
   var scrollTop = $(document).scrollTop();
-  console.log(scrollTop);
+  console.log("scroll:" + scrollTop);
+  console.log("canvas:" + canvasWrapper);
 
-
-
+	// update wrapper min heights and top positions of graphics
+	if(window.innerWidth >= 960){
+		$(".layers-wrapper").css({"min-height": window.innerHeight});
+		$(".canvas-wrapper").css({"min-height": window.innerHeight});
+		$(".controls-wrapper").css({"min-height": window.innerHeight});
+		$("#layers-graphic").css({"top": (window.innerHeight / 2) - (layersGraphicHeight / 2) + 15 + "px" });
+		$("#canvas-graphic").css({"top": (window.innerHeight / 2) - (canvasGraphicHeight / 2) + 15 + "px" });
+		$("#controls-graphic").css({"top": (window.innerHeight / 2) - (controlsGraphicHeight / 2) + 15 + "px" });
+	}
   	// Remove invisible class if scrolling down 
 	if(window.innerWidth >= 960 && scrollTop > lastScrollTop){
 		$("#layers-graphic").removeClass("invisible");
@@ -48,10 +74,10 @@ $(window).scroll(function(event) {
 	}
 
   	// Layers behavior
-    if (window.innerWidth >= 960 && scrollTop >= layersWrapper - 300){
-	    $(".layers-graphic").css({opacity : map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0, 1)});
-	    $(".layers-graphic").css({transform : "scale" + "(" + map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0.75, 1) + ")"});
-	    $(".layers-text").css({opacity : map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0, 1)});
+    if (window.innerWidth >= 960 && scrollTop >= layersWrapper - layersWrapper / 2){
+	    $(".layers-graphic").css({opacity : map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0, 1)});
+	    $(".layers-graphic").css({transform : "scale" + "(" + map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0.75, 1) + ")"});
+	    $(".layers-text").css({opacity : map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0, 1)});
     }
 
 
@@ -61,10 +87,10 @@ $(window).scroll(function(event) {
     }
 
     // Canvas behavior
-    if (window.innerWidth >= 960 && scrollTop >= canvasWrapper - 300){
-	    $(".canvas-graphic").css({opacity : map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0, 1)});
-	    $(".canvas-graphic").css({transform : "scale" + "(" + map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0.75, 1) + ")"});
-	    $(".canvas-text").css({opacity : map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0, 1)});
+    if (window.innerWidth >= 960 && scrollTop >= canvasWrapper - canvasWrapper / 2){
+	    $(".canvas-graphic").css({opacity : map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0, 1)});
+	    $(".canvas-graphic").css({transform : "scale" + "(" + map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0.75, 1) + ")"});
+	    $(".canvas-text").css({opacity : map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0, 1)});
 
     }
 
@@ -76,11 +102,10 @@ $(window).scroll(function(event) {
 
 
  	// Controls behavior
-
-    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper - 400){
-	    $(".controls-graphic").css({opacity : map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0, 1)});
-	    $(".controls-graphic").css({transform : "scale" + "(" + map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0.75, 1) + ")"});
-	    $(".controls-text").css({opacity : map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0, 1)});
+    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper - controlsWrapper / 2){
+	    $(".controls-graphic").css({opacity : map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 300, 0, 1)});
+	    $(".controls-graphic").css({transform : "scale" + "(" + map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 300, 0.75, 1) + ")"});
+	    $(".controls-text").css({opacity : map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 100, 0, 1)});
 
     }
 
@@ -119,11 +144,28 @@ $(window).scroll(function(event) {
 // Add or remove styles on resize
 
 $( window ).resize(function() {
+
+	var scrollTop = $(document).scrollTop();
+	var layersGraphicHeight = $("#layers-graphic").height();
+	var canvasGraphicHeight = $("#canvas-graphic").height();
+	var controlsGraphicHeight = $("#controls-graphic").height();
+
+
+	// update wrapper min heights and top positions of graphics
+	if(window.innerWidth >= 960){
+		$(".layers-wrapper").css({"min-height": window.innerHeight});
+		$(".canvas-wrapper").css({"min-height": window.innerHeight});
+		$(".controls-wrapper").css({"min-height": window.innerHeight});
+		$("#layers-graphic").css({"top": (window.innerHeight / 2) - (layersGraphicHeight / 2) + 15 + "px" });
+		$("#canvas-graphic").css({"top": (window.innerHeight / 2) - (canvasGraphicHeight / 2) + 15 + "px" });
+		$("#controls-graphic").css({"top": (window.innerHeight / 2) - (controlsGraphicHeight / 2) + 15 + "px" });
+	}
+
 	var layersWrapper = $(".layers-wrapper").offset().top;
 	var canvasWrapper = $(".canvas-wrapper").offset().top;
 	var controlsWrapper = $(".controls-wrapper").offset().top;
-	var scrollTop = $(document).scrollTop();
-
+	
+	// remove style
   if(window.innerWidth < 960){
   	 $(".layers-graphic").removeAttr( 'style' );
   	 $(".layers-text").removeAttr( 'style' );
@@ -131,14 +173,16 @@ $( window ).resize(function() {
   	 $(".canvas-text").removeAttr( 'style' );
   	 $(".controls-graphic").removeAttr( 'style' );
   	 $(".controls-text").removeAttr( 'style' );
+   	 $(".layers-wrapper").removeAttr( 'style' );
+	 $(".canvas-wrapper").removeAttr( 'style' );
+   	 $(".controls-wrapper").removeAttr( 'style' );
   }
 
   	// Layers behavior
-    if (window.innerWidth >= 960 && scrollTop >= layersWrapper - 300){
-	    $(".layers-graphic").css({opacity : map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0, 1)});
-	    $(".layers-graphic").css({transform : "scale" + "(" + map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0.75, 1) + ")"});
-	    $(".layers-text").css({opacity : map_range(scrollTop, layersWrapper - 300, layersWrapper - 100, 0, 1)});
-
+    if (window.innerWidth >= 960 && scrollTop >= layersWrapper - layersWrapper / 2){
+	    $(".layers-graphic").css({opacity : map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0, 1)});
+	    $(".layers-graphic").css({transform : "scale" + "(" + map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0.75, 1) + ")"});
+	    $(".layers-text").css({opacity : map_range(scrollTop, layersWrapper - layersWrapper / 2, layersWrapper - 100, 0, 1)});
     }
 
 
@@ -147,16 +191,11 @@ $( window ).resize(function() {
 	    $(".layers-graphic").css({opacity : map_range(scrollTop, layersWrapper + 100, layersWrapper + 300, 1, 0)});
     }
 
-
-
-
-
     // Canvas behavior
-
-    if (window.innerWidth >= 960 && scrollTop >= canvasWrapper - 300){
-	    $(".canvas-graphic").css({opacity : map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0, 1)});
-	    $(".canvas-graphic").css({transform : "scale" + "(" + map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0.75, 1) + ")"});
-	    $(".canvas-text").css({opacity : map_range(scrollTop, canvasWrapper - 300, canvasWrapper - 100, 0, 1)});
+    if (window.innerWidth >= 960 && scrollTop >= canvasWrapper - canvasWrapper / 2){
+	    $(".canvas-graphic").css({opacity : map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0, 1)});
+	    $(".canvas-graphic").css({transform : "scale" + "(" + map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0.75, 1) + ")"});
+	    $(".canvas-text").css({opacity : map_range(scrollTop, canvasWrapper - canvasWrapper / 2, canvasWrapper - 100, 0, 1)});
 
     }
 
@@ -167,13 +206,11 @@ $( window ).resize(function() {
     }
 
 
-
  	// Controls behavior
-
-    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper - 400){
-	    $(".controls-graphic").css({opacity : map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0, 1)});
-	    $(".controls-graphic").css({transform : "scale" + "(" + map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0.75, 1) + ")"});
-	    $(".controls-text").css({opacity : map_range(scrollTop, controlsWrapper - 400, controlsWrapper - 300, 0, 1)});
+    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper - controlsWrapper / 2){
+	    $(".controls-graphic").css({opacity : map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 300, 0, 1)});
+	    $(".controls-graphic").css({transform : "scale" + "(" + map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 300, 0.75, 1) + ")"});
+	    $(".controls-text").css({opacity : map_range(scrollTop, controlsWrapper - controlsWrapper / 2, controlsWrapper - 100, 0, 1)});
 
     }
 
