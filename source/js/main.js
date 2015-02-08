@@ -43,19 +43,6 @@ $(window).scroll(function(event) {
 
     }
 
-    if (window.innerWidth >= 960 && scrollTop >= layersWrapper -0){
-	    $(".layers-graphic").css({position : "fixed"});
-	    $(".layers-graphic").css({top : 50 + "px"});
-	    $(".layers-text").css({"margin-left" : 54.1 + "%"});
-
-	    $(".canvas-graphic").css({position : "fixed"});
-	    $(".canvas-graphic").css({top : 50 + "px"});
-	    $(".canvas-text").css({"margin-left" : 54.1 + "%"});
-
-	    $(".controls-graphic").css({position : "fixed"});
-	    $(".controls-graphic").css({top : 50 + "px"});
-	    $(".controls-text").css({"margin-left" : 54.1 + "%"});
-    }
 
     if (window.innerWidth >= 960 && scrollTop >= layersWrapper + 100){
 	    $(".layers-graphic").css({transform : "translateX" + "(" + map_range(scrollTop, layersWrapper + 100, layersWrapper + 300, 0, -500) + "px)"});
@@ -94,8 +81,8 @@ $(window).scroll(function(event) {
 
     }
 
-    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper - 100 ){
-	    $(".controls-graphic").css({transform : "translateY" + "(" + map_range(scrollTop, controlsWrapper - 100 , controlsWrapper + 200, 0, -300) + "px)"});
+    if (window.innerWidth >= 960 && scrollTop >= controlsWrapper +100 ){
+	    $(".controls-graphic").css({transform : "translateY" + "(" + map_range(scrollTop, controlsWrapper + 100 , controlsWrapper + 400, 0, -300) + "px)"});
     }
 
 
