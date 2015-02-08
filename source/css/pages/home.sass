@@ -92,11 +92,6 @@
 		margin-top: 20%
 
 
-.controls-text-wrapper
-	margin-top: 0
-	@media only screen and (min-width: $second-break)
-		margin-top: 7%
-		width: 39%
 
 
 
@@ -111,7 +106,8 @@
 		height: auto
 		overflow: visible
 		text-align: left
-
+	@media only screen and (min-width: $second-break)
+		float: left
 
 .graphic-wrapper--left
 	max-width: 48%
@@ -146,39 +142,6 @@
 		float: right
 
 
-.layers-graphic
-	max-width: 70%
-	margin-left: -27%
-	@media only screen and (min-width: $first-break)
-		max-width: 48%
-		margin-left: -8%
-	@media only screen and (min-width: $second-break)
-		max-width: 335px
-		margin-left: 0
-
-
-
-.canvas-graphic
-	max-width: 70%
-	margin-right: -27%
-	@media only screen and (min-width: $first-break)
-		max-width: 48%
-		margin-right: -8%
-	@media only screen and (min-width: $second-break)
-		max-width: 336px
-		margin-right: 0
-
-
-
-.controls-graphic
-	max-width: 80%
-	margin-left: -40%
-	@media only screen and (min-width: $first-break)
-		max-width: 48%
-		margin-left: -8%
-	@media only screen and (min-width: $second-break)
-		max-width: 46%
-		margin-left: 0
 
 
 
@@ -324,5 +287,90 @@
 		max-width: 13.5em
 		float: right
 	
+
+
+//// tricked out scrolling
+
+.scroll-wrapper
+	position: relative
+	overflow: hidden
+
+
+.layers-wrapper
+	@media only screen and (min-width: $third-break)
+		min-height: 570px
+
+.canvas-wrapper
+	@media only screen and (min-width: $third-break)
+		min-height: 570px
+
+.controls-wrapper
+	@media only screen and (min-width: $third-break)
+		min-height: 650px
+
+
+
+.layers-text
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+
+.canvas-text
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+
+.controls-text
+
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+
+
+
+
+
+
+
+.layers-graphic
+	max-width: 70%
+	margin-left: -27%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-left: -8%
+	@media only screen and (min-width: $second-break)
+		max-width: 335px
+		margin-left: 0
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+		+scale(0.75)
+
+
+
+
+.canvas-graphic
+	max-width: 70%
+	margin-right: -27%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-right: -8%
+	@media only screen and (min-width: $second-break)
+		max-width: 336px
+		margin-right: 0
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+		+scale(0.75)
+
+
+
+.controls-graphic
+	max-width: 70%
+	margin-right: -27%
+	@media only screen and (min-width: $first-break)
+		max-width: 48%
+		margin-right: -8%
+	@media only screen and (min-width: $second-break)
+		max-width: 336px
+		margin-right: 0
+	@media only screen and (min-width: $third-break)
+		+opacity(0)
+		+scale(0.75)
 
 

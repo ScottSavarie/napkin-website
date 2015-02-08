@@ -25,79 +25,79 @@ description: "Napkin is an app for designing quick mocks on your iphone."
 			.phone-mask
 				%img.graphic{:src=>"img/iphone.png", :alt=> "Napkin Mockup"}
 
-
-%section.l-module--spaced.border-top
-	.l-container--narrow
-		.graphic-wrapper--left.layers-graphic
-			%img{:src=>"img/layers-panel.png", :alt=> "Napkin Layers Panel"}
-		.text-wrapper--right
-			%h1.header
-				Layer Controls
-			%p
-				Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
-			%ul.features-list
-				%li
-					Add various layers to canvas
-				%li
-					Layers snap to grid
-				%li
-					Control status bar appearance
-
-
-
-%section.l-module--spaced.border-top
-	.l-container--narrow
-		.graphic-wrapper--right.canvas-graphic
-			%img.graphic{:src=>"img/canvas.png", :alt=> "Napkin Canvas"}
-		.one-half.text-wrapper--left
-			%h1.header
-				Canvas
-			%p
-				Layout your mock by dragging and resizing layers. Closing the app will save your design for later.
-			%ul.features-list
-				%li
-					Resize anything by dragging
-				%li
-					Double tap anything to edit
-				%li
-					Two finger tap to duplicate
-
-
-%section.l-module--spaced.border-top
-	.l-container--narrow
-		.graphic-wrapper--left.controls-graphic
-			%img.graphic{:src=>"img/editing-controls.png", :alt=> "Napkin Editing Controls"}
-		.one-half.text-wrapper--right.controls-text-wrapper
-			%h1.header
-				Editing Controls
-			%p
-				Edit the properties for any layer that you double tap on. You can also change the layer order, lock the layer, or delete it. 
-			%ul.features-list
-				%li
-					Control layer properties
-				%li
-					Locking and layering 
-				%li
-					Deleting layers
+.scroll-wrapper
+	%section.l-module--spaced.border-top.layers-wrapper
+		.l-container--narrow
+			.graphic-wrapper--left.layers-graphic
+				%img{:src=>"img/layers-panel.png", :alt=> "Napkin Layers Panel"}
+			.text-wrapper--right.layers-text
+				%h1.header
+					Layer Controls
+				%p
+					Add Rectangles, Photos from your camera roll, text labels and icons from a library to your canvas. 
+				%ul.features-list
+					%li
+						Add various layers to canvas
+					%li
+						Layers snap to grid
+					%li
+						Control status bar appearance
 
 
 
-%footer.l-module--spaced.footer#footer.border-top
-	.l-container--narrow
-		.cta-wrapper
-			%h1.header.cta-header
-				Start Designing Mocks On Your Phone.
-			%a.primary-btn.cta-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
-				%span &#63743 Get it on the app store
-		.divider
-		%p.one-half.fl
-			Made by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
-		.one-half.fl.contact-link
-			%a.inline-link{:href=>"mailTo:hello@designwithnapkin.com", :alt=>"Napkin App Contact"}
-				%span Email
-			%a.inline-link{:href=>"http://twitter.com/napkindesign", :alt=>"Napkin App Contact"}
-				%span @napkindesign
+	%section.l-module--spaced.border-top.canvas-wrapper
+		.l-container--narrow
+			.graphic-wrapper--right.canvas-graphic
+				%img.graphic{:src=>"img/canvas.png", :alt=> "Napkin Canvas"}
+			.one-half.text-wrapper--left.canvas-text
+				%h1.header
+					Canvas
+				%p
+					Layout your mock by dragging and resizing layers. Closing the app will save your design for later.
+				%ul.features-list
+					%li
+						Resize anything by dragging
+					%li
+						Double tap anything to edit
+					%li
+						Two finger tap to duplicate
 
-			%a.inline-link{:href=>"http://www.facebook.com/designwithnapkin", :alt=>"Napkin App Contact"}
-				%span Facebook
+
+	%section.l-module--spaced.border-top.controls-wrapper
+		.l-container--narrow
+			.graphic-wrapper--left.controls-graphic
+				%img.graphic{:src=>"img/editing-controls.png", :alt=> "Napkin Editing Controls"}
+			.one-half.text-wrapper--right.controls-text
+				%h1.header
+					Editing Controls
+				%p
+					Edit the properties for any layer that you double tap on. You can also change the layer order, lock the layer, or delete it. 
+				%ul.features-list
+					%li
+						Control layer properties
+					%li
+						Locking and layering 
+					%li
+						Deleting layers
+
+
+
+	%footer.l-module--spaced.footer#footer.border-top
+		.l-container--narrow
+			.cta-wrapper
+				%h1.header.cta-header
+					Start Designing Mocks On Your Phone.
+				%a.primary-btn.cta-button{:href=>"http://www.scottsavarie.ca", :alt=>"App Store Link"}
+					%span &#63743 Get it on the app store
+			.divider
+			%p.one-half.fl
+				Made by <a class="inline-link" href = "http://www.scottsavarie.ca">Scott Savarie</a>
+			.one-half.fl.contact-link
+				%a.inline-link{:href=>"mailTo:hello@designwithnapkin.com", :alt=>"Napkin App Contact"}
+					%span Email
+				%a.inline-link{:href=>"http://twitter.com/napkindesign", :alt=>"Napkin App Contact"}
+					%span @napkindesign
+
+				%a.inline-link{:href=>"http://www.facebook.com/designwithnapkin", :alt=>"Napkin App Contact"}
+					%span Facebook
 
