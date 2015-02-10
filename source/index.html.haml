@@ -6,7 +6,7 @@ description: "Napkin is an app for designing quick mocks on your iphone."
 - @body_class = 'page-home'
 - @page_class = ''
 
-%header.l-module.full-height	
+%header.l-module	
 	.l-container--narrow
 		.one-half.intro-text-wrapper
 			#logo.logo
@@ -27,7 +27,7 @@ description: "Napkin is an app for designing quick mocks on your iphone."
 				%img.graphic{:src=>"img/iphone.png", :alt=> "Napkin Mockup"}
 
 .scroll-wrapper
-	%section.l-module--spaced.border-top.layers-wrapper
+	%section.l-module--spaced.border-top.layers-wrapper.max-height
 		.l-container--narrow
 			.graphic-wrapper--left.layers-graphic#layers-graphic
 				%img{:src=>"img/layers-panel.png", :alt=> "Napkin Layers Panel"}
@@ -46,7 +46,7 @@ description: "Napkin is an app for designing quick mocks on your iphone."
 
 
 
-	%section.l-module--spaced.border-top.canvas-wrapper
+	%section.l-module--spaced.border-top.canvas-wrapper.max-height
 		.l-container--narrow
 			.graphic-wrapper--right.canvas-graphic#canvas-graphic
 				%img.graphic{:src=>"img/canvas.png", :alt=> "Napkin Canvas"}
@@ -64,7 +64,7 @@ description: "Napkin is an app for designing quick mocks on your iphone."
 						Two finger tap to duplicate
 
 
-	%section.l-module--spaced.border-top.controls-wrapper
+	%section.l-module--spaced.border-top.controls-wrapper.max-height
 		.l-container--narrow
 			.graphic-wrapper--left.controls-graphic#controls-graphic
 				%img.graphic{:src=>"img/editing-controls.png", :alt=> "Napkin Editing Controls"}
