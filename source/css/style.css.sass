@@ -23,9 +23,8 @@ body
   color: $c-darkgrey
   font-family: "brandon-grotesque",sans-serif
   -webkit-font-smoothing: antialiased
-  background: $c-blue
+  background: $c-greybg
   font-weight: 400
-  color: white
 
 ul, ol
   list-style-type: none
@@ -38,12 +37,13 @@ a:link, a:visited
 
 a.inline-link, a.inline-link:visited
   text-decoration: none
-  color: white
+  color: $c-darkgrey
   +opacity(0.5)
   +transition-property(opacity)
   +transition-duration(0.5s)
   +transition-timing-function(ease-out)
   &:hover, &:focus
+    color: $c-blue
     +opacity(1)
 
 a.grey-link, a.grey-link:visited
