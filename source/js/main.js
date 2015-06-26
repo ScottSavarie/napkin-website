@@ -17,8 +17,8 @@ console.log("yoyo");
 /* = On Arrow Click
 ============================================================================== */
 
-$( ".arrow" ).click(function() {
-  $(".arrow").addClass("invisible");
+$( "#arrow" ).click(function() {
+  $("#arrow").addClass("invisible");
 	$('html,body').animate({scrollTop: $(this).offset().top + 130}, 600);
 });
 
