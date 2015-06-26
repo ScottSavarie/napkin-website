@@ -240,7 +240,7 @@
 
 .features-list
 	li
-		+opacity(0.5)
+		color: $c-lightgrey
 		font-size: $f-m
 		float: left
 		padding-bottom: $l-s
@@ -253,6 +253,7 @@
 			width: 30px
 			display: block
 			position: relative
+			top: -4px
 			float: left
 			background-size: 15px
 			margin-top: 13px
@@ -342,7 +343,7 @@
 		max-width: 48%
 		margin-left: -8%
 	@media only screen and (min-width: $second-break)
-		max-width: 335px
+		max-width: 328px
 		margin-left: 0
 	@media only screen and (min-width: $third-break)
 		+opacity(0)
@@ -362,13 +363,15 @@
 		max-width: 48%
 		margin-right: -8%
 	@media only screen and (min-width: $second-break)
-		max-width: 336px
-		margin-right: 0
+		max-width: 477px
+		margin-right: -21%
 	@media only screen and (min-width: $third-break)
 		+opacity(0)
 		+scale(0.75)
 		position: fixed
 		top: 50px
+		margin-left: -70px
+
 
 
 
@@ -381,7 +384,7 @@
 		max-width: 48%
 		margin-left: -8%
 	@media only screen and (min-width: $second-break)
-		max-width: 335px
+		max-width: 328px
 		margin-left: 0
 	@media only screen and (min-width: $third-break)
 		+opacity(0)
