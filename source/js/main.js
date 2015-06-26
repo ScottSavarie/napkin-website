@@ -16,7 +16,18 @@ console.log("yoyo");
 
 
 
-/* =Scrolling
+/* = On Arrow Click
+============================================================================== */
+
+$( ".arrow" ).click(function() {
+  $(".arrow").addClass("invisible");
+	$('html,body').animate({scrollTop: $(this).offset().top + 130}, 600);
+});
+
+
+
+
+/* =Scrolling and hiding arrow
 ============================================================================== */
 
 map_range = function(value, low1, high1, low2, high2) {
@@ -68,6 +79,10 @@ $(window).load(function(){
 		console.log("canvasH:" + canvasWrapperHeight);
 		console.log("distance:" + (canvasWrapper - scrollTop));
 		console.log("middle:" + (canvasWrapper - scrollTop + (layersWrapperHeight /2)));
+
+		// Hide Arrow
+		$(".arrow").addClass("invisible");
+
 
 		// Set again reposition after scrolled back to top
 		if(window.innerWidth >= 960){
